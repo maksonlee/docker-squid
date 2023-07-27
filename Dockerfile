@@ -6,9 +6,9 @@ RUN set -x \
     && apt-get update \
     && apt-get install --no-install-recommends --no-install-suggests -y curl build-essential libssl-dev ca-certificates \
     && cd /tmp \
-    && curl -OL http://www.squid-cache.org/Versions/v6/squid-6.0.3.tar.gz \
-    && tar xzvf squid-6.0.3.tar.gz \
-    && cd squid-6.0.3 \
+    && curl -OL http://www.squid-cache.org/Versions/v6/squid-6.1.tar.gz \
+    && tar xzvf squid-6.1.tar.gz \
+    && cd squid-6.1 \
     && ./configure --with-default-user=proxy --with-openssl --enable-ssl-crtd \
     && make -j12 \
     && make install \
